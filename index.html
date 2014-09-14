@@ -25,7 +25,7 @@
           What Day Is Today?
           <form id="q1form">
           <input type="text" name="day" placeholder="MMDDYY"/>
-          <button class="btn"/>
+          <input type="submit" value="Go"/>
           </form>
         </h3>
 
@@ -34,7 +34,7 @@
           Enter Running Man Uplink Code
           <form id="q2form">
           <input type="text" name="code" placeholder=""/>
-          <button class="btn"/>
+          <input type="submit" value="Go"/>
           </form>
         </h3>
         
@@ -49,18 +49,18 @@
         ev.preventDefault();
         v = $('#q1form input').val();
         if (v == "082997" || v == "82997") {
-          $('#q1').hide("slide", 250, function() { $('#q2').show("blind");});
+          $('#q1').hide("slide", 500, function() { $('#q2').show("blind");});
         } else {
-          $('#q1').effect("shake", 1000, function() { $('#q1form input').val(""); });
+          $('#q1').effect("shake", 500, function() { $('#q1form input').val(""); });
         }
       });
       $('#q2form button').on("click", function(ev) {
         ev.preventDefault();
         v = $('#q2form input').val();
         if (v == "182461B17174" || v == "182461b17174") {
-          $('#q2').hide("slide", 250, function() { $('#q3').show("drop", 500);});
+          $('#q2').hide("slide", 500, function() { $('#q3').show("fade", 500);});
         } else {
-          $('#q2').effect("shake", 1000, function() { $('#q2form input').val(""); });
+          $('#q2').effect("shake", 500, function() { $('#q2form input').val(""); });
         }
       })
     </script>
