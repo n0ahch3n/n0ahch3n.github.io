@@ -23,8 +23,8 @@
           <a name="what-day" class="anchor" href="#what-day"><span class="octicon octicon-link"></span></a>
           What Day Is Today?
           <form id="q1form">
-          <input type="text" name="day"/>
-          <button/>
+          <input type="text" name="day" placeholder="MMDDYY"/>
+          <button class="btn"/>
           </form>
         </h3>
 
@@ -32,8 +32,8 @@
           <a name="enter-running-man-uplink-code" class="anchor" href="#enter-running-man-uplink-code"><span class="octicon octicon-link"></span></a>
           Enter Running Man Uplink Code
           <form id="q2form">
-          <input type="text" name="code"/>
-          <button/>
+          <input type="text" name="code" placeholder=""/>
+          <button class="btn"/>
           </form>
         </h3>
       </section>
@@ -41,7 +41,11 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-      $('#q1form button').on("click", function(ev) { $('#q2').show(); });
+      $('#q1form button').on("click", function(ev) {
+        ev.preventDefault();
+        $('#q1').hide();
+        $('#q2').show();
+      });
     </script>
     
   </body>
