@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
     
     <title>N0AH P0RTAL by n0ahch3n</title>
   </head>
@@ -42,16 +43,17 @@
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script>
       $('#q1form button').on("click", function(ev) {
         ev.preventDefault();
-        $('#q1').hide();
-        $('#q2').show();
+        $('#q1').hide("blind");
+        $('#q2').show("blind");
       });
       $('#q2form button').on("click", function(ev) {
         ev.preventDefault();
-        $('#q2').hide();
-        $('#q3').show();
+        $('#q2').hide("blind");
+        $('#q3').show("blind");
       })
     </script>
     
