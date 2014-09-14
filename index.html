@@ -36,6 +36,8 @@
           <button class="btn"/>
           </form>
         </h3>
+        
+        <img id="q3" src="https://cloud.githubusercontent.com/assets/8769388/4264860/989d040e-3c36-11e4-9fb4-c1467e229957.jpg"/>
       </section>
     </div>
 
@@ -46,6 +48,11 @@
         $('#q1').hide();
         $('#q2').show();
       });
+      $('#q2form button').on("click", function(ev) {
+        ev.preventDefault();
+        #('#q2').hide();
+        #('#q3').show();
+      })
     </script>
     
   </body>
