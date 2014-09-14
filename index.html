@@ -25,7 +25,7 @@
           What Day Is Today?
           <form id="q1form">
           <input type="text" name="day" placeholder="MMDDYY"/>
-          <input type="submit" value="Go"/>
+          <input type="button" value="Go"/>
           </form>
         </h3>
 
@@ -34,7 +34,7 @@
           Enter Running Man Uplink Code
           <form id="q2form">
           <input type="text" name="code" placeholder=""/>
-          <input type="submit" value="Go"/>
+          <input type="button" value="Go"/>
           </form>
         </h3>
         
@@ -45,7 +45,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script>
-      $('#q1form button').on("click", function(ev) {
+      $('#q1form').submit(function(ev) {
         ev.preventDefault();
         v = $('#q1form input').val();
         if (v == "082997" || v == "82997") {
@@ -54,7 +54,7 @@
           $('#q1').effect("shake", 500, function() { $('#q1form input').val(""); });
         }
       });
-      $('#q2form button').on("click", function(ev) {
+      $('#q2form').submit(function(ev) {
         ev.preventDefault();
         v = $('#q2form input').val();
         if (v == "182461B17174" || v == "182461b17174") {
