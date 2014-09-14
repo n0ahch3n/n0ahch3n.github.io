@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
+    
     <title>N0AH P0RTAL by n0ahch3n</title>
   </head>
 
@@ -16,24 +14,35 @@
     <header>
       <div class="container">
         <h1>N0AH P0RTAL</h1>
-        <h2></h2>
-
-        <section id="downloads">
-          <a href="https://github.com/n0ahch3n" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
       </div>
     </header>
 
     <div class="container">
       <section id="main_content">
-        <h3>
-<a name="what-day-is-today" class="anchor" href="#what-day-is-today"><span class="octicon octicon-link"></span></a>What Day Is Today?</h3>
+        <h3 id="q1">
+          <a name="what-day" class="anchor" href="#what-day"><span class="octicon octicon-link"></span></a>
+          What Day Is Today?
+          <form id="q1form">
+          <input type="text" name="day"/>
+          <button/>
+          </form>
+        </h3>
 
-<h3>
-<a name="enter-running-man-uplink-code" class="anchor" href="#enter-running-man-uplink-code"><span class="octicon octicon-link"></span></a>Enter Running Man Uplink Code</h3>
+        <h3 id="q2">
+          <a name="enter-running-man-uplink-code" class="anchor" href="#enter-running-man-uplink-code"><span class="octicon octicon-link"></span></a>
+          Enter Running Man Uplink Code
+          <form id="q2form">
+          <input type="text" name="code"/>
+          <button/>
+          </form>
+        </h3>
       </section>
     </div>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $('#q1form button').on("click", function(ev) { $('#q2').show(); });
+    </script>
     
   </body>
 </html>
