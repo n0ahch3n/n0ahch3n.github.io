@@ -47,13 +47,17 @@
     <script>
       $('#q1form button').on("click", function(ev) {
         ev.preventDefault();
-        $('#q1').hide("blind");
-        $('#q2').show("blind");
+        v = $('#q1form input').val();
+        if (v == "082997" || v == "82997") {
+          $('#q1').hide("blind", 250, function() { $('#q2').show("blind");});
+        }
       });
       $('#q2form button').on("click", function(ev) {
         ev.preventDefault();
-        $('#q2').hide("blind");
-        $('#q3').show("blind");
+        v = $('#q2form input').val();
+        if (v == "182461B17174" || v == "182461b17174") {
+          $('#q2').hide("blind", 250, function() { $('#q3').show("blind", 500);});
+        }
       })
     </script>
     
